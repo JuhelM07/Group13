@@ -1,7 +1,7 @@
 from django.contrib import admin
 from tutorial import views
 from django.conf.urls import url, include
-from tutorial.views import login_redirect
+from tutorial import views
 
 urlpatterns = [
     url(r'^$', views.login_redirect, name= 'login_redirect'),
