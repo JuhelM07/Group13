@@ -2,6 +2,7 @@ from django.conf.urls import url
 from . import views
 from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
 
+app_name="account"
 
 urlpatterns= [
     url(r'^$', views.home),
