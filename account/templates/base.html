@@ -16,7 +16,7 @@
   <body>
     <div class="container">
       <nav class="navbar navbar-expand navbar-light bg-light">
-      <a class="navbar-brand text-primary font-weight-light">Foodelicious</a>
+      <a class="navbar-brand text-primary font-weight-light">{{user}}</a>
 
 
       <div id= navbar class="collapse navbar-collapse">
@@ -27,12 +27,7 @@
           <li class="nav-item active mr-2">
             <a class="btn btn-sm btn-outline-primary" href="/account"> Home <span class="sr-only">(current)</span> </a>
           </li>
-          <li class="nav-item active mr-2">
-              <a class="btn btn-sm btn-outline-primary" href="{% url 'account:login' %}"> Login </a>
-          </li>
-          <li class="nav-item active mr-2">
-              <a class="btn btn-sm btn-outline-primary" href="{% url 'account:logout' %}">Logout</a>
-          </li>
+          
           <li class="nav-item active mr-2">
               <a class="btn btn-sm btn-outline-primary" href="{% url 'account:view_profile' %}">Profile</a>
             <li class="nav-item active mr-2">
@@ -43,16 +38,21 @@
           <li class="nav-item active mr-2">
               <a class="btn btn-sm btn-outline-primary" href="{% url 'account:change_password' %}">Change Password</a>
           </li>
-          <li class="nav-item active mr-2">
-              <a class="btn btn-sm btn-outline-primary" href="{% url 'account:reset_password' %}">Reset Password</a>
-          </li>
+          
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item active mr-2">
+                <a class="btn btn-sm btn-outline-primary" href="{% url 'account:logout' %}">Logout</a>
+            </li>
         </ul>
 
 
 
         {% else %}
         <ul class="navbar-nav mr-auto">
-
+            <li class="nav-item active mr-2">
+                <a class="btn btn-sm btn-outline-primary" href="{% url 'account:reset_password' %}">Forgotten Password?</a>
+            </li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
