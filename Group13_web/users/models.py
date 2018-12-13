@@ -12,7 +12,7 @@ class Profile(models.Model):
            ("O", "Other")
       )
     gender = forms.ChoiceField(choices = GENDER_CHOICES)
-    birth_date = models.DateField()
+    birth_date = models.DateField(null=True)
 
     def __str__(self):
         return f'{self.user.username} Profile'
