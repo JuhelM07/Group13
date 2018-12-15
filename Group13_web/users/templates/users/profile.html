@@ -9,8 +9,17 @@
         <p class="text-secondary">{{ user.email }}</p>
         <p class="text-secondary">{{ user.profile.gender }}</p>
         <p class="text-secondary">{{ user.profile.birth_date }}</p>
+        <p class="text-secondary">{{ user.profile.hobbies }}</p>
       </div>
   </div>
+  
 <!-- FORM HERE -->
+</div>
+
+<div class="content-section">
+    <h2 class="account-heading">Write a new post</h2>
+    <br>
+    <textarea rows="4" cols="68" name="post" form="usrform">
+        Enter text here...</textarea>
 </div>
 {% endblock content %}
